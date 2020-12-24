@@ -15,11 +15,11 @@ const App = () => {
                     {/** */}
                 </Route>
 
-                <Route exact path="/watched">
+                <Route exact path="/cart">
                     {/** */}
                 </Route>
 
-                <Route exact path="/add">
+                <Route exact path="/sign-in">
                     {/** */}
                 </Route>
             </Switch>
