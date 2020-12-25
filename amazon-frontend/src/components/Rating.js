@@ -7,7 +7,7 @@ import "../styles/Rating.css"
 
 const Rating = (props) => {
     
-    const {rating, reviews} = props;
+    const {rating, numRev} = props;
 
     return (
         <div className="rating">
@@ -45,6 +45,8 @@ const Rating = (props) => {
             ? <StarHalfIcon/>
             : <StarBorderIcon/>
             }
+
+            <p>{numRev} reviews</p>
         </div>
     )
 }

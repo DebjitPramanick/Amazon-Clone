@@ -7,3 +7,10 @@
     font-size: 22px !important;
     color: rgb(255, 166, 0) ;
 }
+
+.rating p{
+    margin-left: 14px !important;
+    font-size: 18px !important;
+    color: grey;
+    font-weight: 400 !important;
+}
