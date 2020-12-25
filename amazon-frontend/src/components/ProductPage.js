@@ -10,7 +10,7 @@ const ProductPage = (props) => {
 
     return (
         <div>
-            <Link to="/">Back to result</Link>
+            <Link to="/" className="back-res">Back to result</Link>
             <div className="row">
                 <div className="col-1">
                     <img className= "large" src={product.image} alt=""/>

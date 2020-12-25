@@ -5,6 +5,11 @@
     margin: 30px 20px;
 }
 
+.back-res{
+    color: grey;
+    margin: 20px;
+}
+
 .col-1{
     padding: 16px;
     display: flex;

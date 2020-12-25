@@ -5,3 +5,22 @@
     grid-gap: 20px;
     padding: 40px;
 }
+
+
+@media(max-width: 900px){
+    .product-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 900px){
+    .product-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(min-width: 1280px){
+    .product-container{
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

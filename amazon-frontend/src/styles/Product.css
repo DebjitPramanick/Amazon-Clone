@@ -1,6 +1,7 @@
 .product-card{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 16px;
     border: 2px solid grey;
     border-radius: 4px;
@@ -23,4 +24,15 @@
     font-size: 22px;
     font-weight: 600;
     margin: 8px 0;
+}
+
+
+@media(max-width: 900px){
+    .product-image{
+        height: 120px;
+    }
+
+    .product-card{
+        height: 280px;
+    }
 }
