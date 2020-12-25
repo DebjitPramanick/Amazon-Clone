@@ -1,0 +1,9 @@
+.rating{
+    display: flex;
+    align-items: center;
+}
+
+.rating > .MuiSvgIcon-root{
+    font-size: 22px !important;
+    color: rgb(255, 166, 0) ;
+}

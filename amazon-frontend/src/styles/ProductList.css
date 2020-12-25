@@ -5,25 +5,3 @@
     grid-gap: 20px;
     padding: 40px;
 }
-
-.product-card{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 16px;
-    border: 2px solid grey;
-    border-radius: 4px;
-}
-
-.product-card img{
-    width: 100%;
-}
-.product-card h2{
-    font-size: 18px;
-    margin: 14px 0;
-}
-.product-card p{
-    font-size: 22px;
-    font-weight: 600;
-    margin: 8px 0;
-}
