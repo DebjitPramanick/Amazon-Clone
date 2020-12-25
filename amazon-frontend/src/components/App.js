@@ -16,13 +16,10 @@ const App = () => {
                 <Route exact path="/sign-in">{/** */}</Route>
             </Switch>
             
-            <Route path="/" component={Home}></Route>
-            <Route path="/prodct/:id" component={ProductPage}></Route>
+            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/product/:id" component={ProductPage}></Route>
 
         </Router>
-
-
-        
 
         </>
         
