@@ -14,10 +14,12 @@ const App = () => {
             <Switch>
                 <Route exact path="/cart">{/** */}</Route>
                 <Route exact path="/sign-in">{/** */}</Route>
+                <Route path="/products/product/:id" component={ProductPage}></Route>
+                <Route path="/" component={Home} exact></Route>
             </Switch>
             
-            <Route exact path="/" component={Home}></Route>
-            <Route exact path="/product/:id" component={ProductPage}></Route>
+            
+            
 
         </Router>
 

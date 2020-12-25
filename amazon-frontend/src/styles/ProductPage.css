@@ -71,7 +71,7 @@
 }
 
 .card-body button{
-    background-color: rgb(255, 181, 44);
+    background-color: #f0c040;
     border-radius: 4px;
     display: block;
     width: 100%;
@@ -80,4 +80,13 @@
     cursor: pointer;
     margin-top: 30px;
     font-size: 18px;
+    outline: 0;
+}
+
+
+@media(max-width: 900px){
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
 }
