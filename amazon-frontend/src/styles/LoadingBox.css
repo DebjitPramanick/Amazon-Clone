@@ -1,0 +1,22 @@
+.loading-box{
+    max-width: 400px;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px grey;
+    margin: auto;
+    transform: translateY(50%);
+    text-align: center;
+}
+
+.loading-box > .MuiSvgIcon-root{
+    color: orange;
+    font-size: 80px !important;
+
+}
+
+.loading-box p{
+    margin-top: 16px;
+    font-size: 20px;
+    color: grey;
+}
