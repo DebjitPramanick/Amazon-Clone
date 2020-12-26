@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from './Header'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from './Home';
-import ProductPage from './ProductPage'
+import Home from '../pages/Home';
+import ProductPage from '../pages/ProductPage'
 
 const App = () => {
     return (
