@@ -38,5 +38,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
+=======
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0"
+>>>>>>> 928b665 (Version 1)
   }
 }
