@@ -31,8 +31,6 @@ const ProductList = () => {
         fetchdata();
     }, [])
 
-    console.log(products);
-
 
     return (
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-keys */
 export const data=[
     {
         id: 1,

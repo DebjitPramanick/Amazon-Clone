@@ -1,4 +1,4 @@
-export const data=[
+export const products=[
     {
         id: 1,
         image: "https://cnet1.cbsistatic.com/img/XGoLGWy-Ih3pSfXEd1rBJVFbwAQ=/0x0:2667x4000/770x433/2020/08/04/4964745c-5c94-4823-ab62-f40c0c7e38a9/025-hp-envy-17.jpg",
