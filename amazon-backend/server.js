@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import {products} from "./products.js"
+import {data} from "./data.js"
 
 const app = express()
 const port = process.env.PORT || 5000
@@ -13,7 +13,7 @@ app.use(cors());
 
 
 app.get('/api/products',(req,res)=>{
-    res.status(200).send(products);
+    res.status(200).send(data);
 })
 
 
