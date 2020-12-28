@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { addToCart } from '../actions/CartAction';
 
 const Cart = (props) => {
@@ -8,6 +8,9 @@ const Cart = (props) => {
     const qty = props.location.search ? 
         Number(props.location.search.split('=')[1])
         : 1;
+
+    
+    const cart = useSelector((state) => state.cart);
 
     const dispatch = useDispatch();
 
@@ -19,10 +22,7 @@ const Cart = (props) => {
 
     return (
         <div>
-            This is cart.
-            <p>
-                Add to cart: Product ID: {productID} Quantity: {qty} 
-            </p>
+            
         </div>
     )
 }
