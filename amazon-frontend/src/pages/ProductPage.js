@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect,useState} from 'react'
 import { Link } from 'react-router-dom';
 import {useSelector,useDispatch} from "react-redux"
 import Rating from '../components/Rating';
@@ -14,6 +14,10 @@ const ProductPage = (props) => {
 
     const productDetails = useSelector((state) => state.productDetails);
     const {loading,error,product} = productDetails;
+
+
+    const [qty, setQty] = useState(1);
+
 
     useEffect(() => {
         dispatch(detailsProduct(productID));
@@ -63,9 +67,32 @@ const ProductPage = (props) => {
                                         : (<span className="error">Out of stock</span>)
                                         }
                                     </li>
-                                    <li>
-                                        <button>Add to cart</button>
-                                    </li>
+
+                                    {
+                                        (product.stock > 0) && (
+                                            <>
+                                            <li>
+                                                <div className="row">
+                                                    <p>Qty</p>
+                                                    <div>
+                                                        <select value={qty} onChange={(e) => setQty(e.target.value)}>
+                                                            {
+                                                                [...Array(product.stock).keys()].map((x)=>(
+                                                                    <option value={x+1}>{x+1}</option>
+                                                                ))
+                                                            }
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <button>Add to cart</button>
+                                            </li>
+                                            </>
+
+                                        )
+                                    }
+                                    
                                 </ul>
                             </div>
                         </div>
