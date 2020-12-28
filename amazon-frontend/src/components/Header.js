@@ -1,8 +1,17 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import '../styles/Header.css'
+import { useSelector } from 'react-redux';
+
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const Header = () => {
+
+    const cart = useSelector((state) => state.cart);
+    const {cartItems} = cart;
+
+
     return (
         <header>
             <div className="container">
@@ -12,8 +21,15 @@ const Header = () => {
                     </div>
 
                     <ul className="nav-links">
-                        <li><Link to="/cart">Cart</Link></li>
-                        <li><Link to="/sign-in">Sign-in</Link></li>
+                        <li>
+                            <Link to="/cart"><ShoppingCartIcon/>
+                                {
+                                    cartItems.length > 0 && 
+                                    (<p className="badge">{cartItems.length}</p>)
+                                }
+                            </Link>
+                        </li>
+                        <li><Link to="/sign-in"><AccountCircleIcon/></Link></li>
                     </ul>
                 </div>
             </div>
