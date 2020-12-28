@@ -15,7 +15,7 @@ const Product = ({product}) => {
             </div>
             <h2>{product.name}</h2>
             <Rating rating={product.rating} numRev={product.numRev}/>
-            <p>{product.price}</p>
+            <p>${product.price}</p>
         </div>
         </Link>
     )

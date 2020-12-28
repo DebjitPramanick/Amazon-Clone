@@ -5,7 +5,7 @@ export const data=[
         name: "HP Laptop",
         rating: "5",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        price: "$600",
+        price: 600,
         rating: 5,
         numRev: 11,
         stock: 16
@@ -16,7 +16,7 @@ export const data=[
         name: "Lenovo Laptop",
         rating: "5",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        price: "$580",
+        price: 580,
         rating: 4.5,
         numRev: 25,
         stock: 20
@@ -27,7 +27,7 @@ export const data=[
         name: "Mouse",
         rating: "5",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        price: "$350",
+        price: 350,
         rating: 3,
         numRev: 46,
         stock: 2
@@ -38,7 +38,7 @@ export const data=[
         name: "Monitor",
         rating: "5",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        price: "$270",
+        price: 270,
         rating: 4.5,
         numRev: 17,
         stock: 9
@@ -49,7 +49,7 @@ export const data=[
         name: "Mobile",
         rating: "5",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        price: "$300",
+        price: 300,
         rating: 2,
         numRev: 33,
         stock: 0
@@ -60,7 +60,7 @@ export const data=[
         name: "Keyboard",
         rating: "5",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        price: "$120",
+        price: 120,
         rating: 4,
         numRev: 20,
         stock: 50
@@ -71,7 +71,7 @@ export const data=[
         name: "Earphone",
         rating: "5",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        price: "$90",
+        price: 90,
         rating: 5,
         numRev: 14,
         stock: 4

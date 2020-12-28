@@ -75,7 +75,16 @@
     font-weight: 800;
 }
 
-.card-body button{
+
+.qty-select select{
+    padding: 10px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.card-body .add-to-cart{
     background-color: #f0c040;
     border-radius: 4px;
     display: block;

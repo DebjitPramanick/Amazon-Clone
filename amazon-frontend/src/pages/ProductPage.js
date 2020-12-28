@@ -23,6 +23,15 @@ const ProductPage = (props) => {
         dispatch(detailsProduct(productID));
     }, [dispatch,productID]);
 
+
+
+    const addToCart = () =>{
+        props.history.push(`/cart/${productID}?qty=${qty}`)
+    }
+
+
+
+
     return (
 
         <div>
@@ -44,7 +53,7 @@ const ProductPage = (props) => {
                                     <Rating rating={product.rating}
                                     numRev={product.numRev} />
                                 </li>
-                                <li className="pd-price">{product.price}</li>
+                                <li className="pd-price">${product.price}</li>
                                 <li className="pd-desc">
                                     Description :
                                     <p>{product.desc}</p>
@@ -56,7 +65,8 @@ const ProductPage = (props) => {
                                 <ul>
                                     <li>
                                         <p>Price</p>
-                                        <div className="price">{product.price}</div>
+                                        <div className="price">${product.price*qty}</div>
+                                        {console.log(product.price)}
                                     </li>
                                     <li>
                                         <p>Stock</p>
@@ -72,21 +82,21 @@ const ProductPage = (props) => {
                                         (product.stock > 0) && (
                                             <>
                                             <li>
-                                                <div className="row">
-                                                    <p>Qty</p>
-                                                    <div>
-                                                        <select value={qty} onChange={(e) => setQty(e.target.value)}>
-                                                            {
-                                                                [...Array(product.stock).keys()].map((x)=>(
-                                                                    <option value={x+1}>{x+1}</option>
-                                                                ))
-                                                            }
-                                                        </select>
-                                                    </div>
+                                                <p>Qty</p>
+                                                <div className="qty-select">
+                                                    <select value={qty} onChange={(e) => setQty(e.target.value)}>
+                                                        {
+                                                            [...Array(product.stock).keys()].map((x)=>(
+                                                                <option value={x+1}>{x+1}</option>
+                                                            ))
+                                                        }
+                                                    </select>
                                                 </div>
                                             </li>
                                             <li>
-                                                <button>Add to cart</button>
+                                                <button className="add-to-cart" onClick={addToCart}>
+                                                    Add to cart
+                                                </button>
                                             </li>
                                             </>
 
