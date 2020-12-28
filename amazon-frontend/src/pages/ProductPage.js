@@ -64,7 +64,7 @@ const ProductPage = (props) => {
                             <div className="card card-body">
                                 <ul>
                                     <li>
-                                        <p>Price</p>
+                                        <p>Total amount</p>
                                         <div className="price">${product.price*qty}</div>
                                         {console.log(product.price)}
                                     </li>
