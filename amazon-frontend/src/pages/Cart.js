@@ -4,6 +4,7 @@ import { addToCart } from '../actions/CartAction';
 import { Link } from 'react-router-dom';
 import MessageBox from "../components/MessageBox";
 import "../styles/Cart.css"
+import ArrowBackRoundedIcon from '@material-ui/icons/ArrowBackRounded';
 
 
 const Cart = (props) => {
@@ -35,7 +36,10 @@ const Cart = (props) => {
     }
 
     return (
-        <div className="row-top">
+        <div>
+            <Link to="/" className="back-res">Back to home</Link>
+
+            <div className="row-top">
             <div className="col-4">
                 <h1>Shopping Cart</h1>
                 {cartItems.length === 0 ? (
@@ -69,7 +73,7 @@ const Cart = (props) => {
                                             }
                                             </select>
                                         </div>
-                                        <p>${item.price}</p>
+                                        <p>${item.price * item.qty}</p>
                                         <div className="remove-btn">
                                             <button type="button" onClick={() => removeFromCart(item.product)}>Remove</button>
                                         </div>
@@ -106,6 +110,9 @@ const Cart = (props) => {
                 </div>
             </div>
         </div>
+
+        </div>
+        
     )
 }
 
