@@ -30,6 +30,10 @@ const Cart = (props) => {
         //fewwf
     }
 
+    const checkOut =() =>{
+        props.history.push("/signin?redirect=shipping")
+    }
+
     return (
         <div className="row-top">
             <div className="col-4">
@@ -53,11 +57,11 @@ const Cart = (props) => {
                                         <div className="min-30">
                                             <Link to={`/prodcut/${item.product}`}>{item.name}</Link>
                                         </div>
-                                        <div>
+                                        <div className="qty-select">
                                             <select value={item.qty} 
-                                            onChange={e => 
-                                            dispatch(addToCart(item.product),
-                                            Number(e.target.value))}>
+                                            onChange={(e) => 
+                                            dispatch(addToCart(item.product,Number(e.target.value)))
+                                            }>
                                             {
                                                 [...Array(item.stock).keys()].map((x)=>(
                                                     <option value={x+1}>{x+1}</option>
@@ -66,8 +70,8 @@ const Cart = (props) => {
                                             </select>
                                         </div>
                                         <p>${item.price}</p>
-                                        <div>
-                                            <button type="button" onClick={() => removeFromCart(item.product)}></button>
+                                        <div className="remove-btn">
+                                            <button type="button" onClick={() => removeFromCart(item.product)}>Remove</button>
                                         </div>
                                     </div>
                                 </li>
@@ -75,6 +79,28 @@ const Cart = (props) => {
                         }
                     </ul>
                 )}
+            </div>
+
+            <div className="col-5">
+                <div className="card card-body">
+                    <ul>
+                        <li>
+                            <h2>
+                                Subtotal ({cartItems.reduce((a,c) => a + c.qty,0)} items) : $
+                                {cartItems.reduce((a,c)=> a + c.price * c.qty, 0)}
+                            </h2>
+                        </li>
+                        <li>
+                            <button type="button" onClick={checkOut}
+                            className="checkout-btn"
+                            disabled={cartItems.length === 0}
+                            >
+                                Proceed to Checkout
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
             </div>
         </div>
     )
