@@ -86,9 +86,11 @@ const Cart = (props) => {
                     <ul>
                         <li>
                             <h2>
-                                Subtotal ({cartItems.reduce((a, c) => (a + c), 0)} items) : $
+                                Subtotal ({cartItems.reduce((a, c) => {
+                                    console.log(c.qty);
+                                    return a + c.qty;
+                                }, 0)} items) : $
                                 {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
-                                {console.log(cartItems.reduce((a, c) => (a + c.qty), 0))}
                             </h2>
                         </li>
                         <li>
