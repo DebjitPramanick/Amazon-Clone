@@ -1,9 +1,18 @@
 import express from 'express'
+import mongoose from 'mongoose'
 import cors from 'cors'
 import {products} from "./products.js"
+import userRouter from './routers/userRouter.js'
 
 const app = express()
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5000;
+/*const connection_url = "mongodb://localhost/amazon-clone"
+
+mongoose.connect(connection_url,{
+    useCreateIndex: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})*/
 
 
 
@@ -27,6 +36,9 @@ app.get('/api/products/:id',(req,res)=>{
         res.status(404).send({message: 'Product not found.'});
     }
 })
+
+
+app.use("/api/users", userRouter);
 
 
 app.get('/',(req,res)=>res.status(200).send('Hello Debjit here. It is Amazon clone project.'))
