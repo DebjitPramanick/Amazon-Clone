@@ -55,7 +55,7 @@ const Cart = (props) => {
                                         </div>
 
                                         <div className="min-30">
-                                            <Link to={`/prodcut/${item.product}`}>{item.name}</Link>
+                                            <Link to={`/products/product/${item.product}`}>{item.name}</Link>
                                         </div>
                                         <div className="qty-select">
                                             <select value={item.qty} 
@@ -86,8 +86,9 @@ const Cart = (props) => {
                     <ul>
                         <li>
                             <h2>
-                                Subtotal ({cartItems.reduce((a,c) => a + c.qty,0)} items) : $
-                                {cartItems.reduce((a,c)=> a + c.price * c.qty, 0)}
+                                Subtotal ({cartItems.reduce((a, c) => (a + c), 0)} items) : $
+                                {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
+                                {console.log(cartItems.reduce((a, c) => (a + c.qty), 0))}
                             </h2>
                         </li>
                         <li>
