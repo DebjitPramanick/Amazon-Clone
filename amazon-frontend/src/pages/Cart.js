@@ -1,10 +1,9 @@
 import React,{useEffect} from 'react'
 import { useDispatch,useSelector } from 'react-redux';
-import { addToCart } from '../actions/CartAction';
+import { addToCart,removeFromCart } from '../actions/CartAction';
 import { Link } from 'react-router-dom';
 import MessageBox from "../components/MessageBox";
 import "../styles/Cart.css"
-import ArrowBackRoundedIcon from '@material-ui/icons/ArrowBackRounded';
 
 
 const Cart = (props) => {
@@ -27,8 +26,8 @@ const Cart = (props) => {
     }, [dispatch, productID, qty])
 
 
-    const removeFromCart = (id) =>{
-        //fewwf
+    const removeProduct = (id) =>{
+        dispatch(removeFromCart(id));
     }
 
     const checkOut =() =>{
@@ -75,7 +74,7 @@ const Cart = (props) => {
                                         </div>
                                         <p>${item.price * item.qty}</p>
                                         <div className="remove-btn">
-                                            <button type="button" onClick={() => removeFromCart(item.product)}>Remove</button>
+                                            <button type="button" onClick={() => removeProduct(item.product)}>Remove</button>
                                         </div>
                                     </div>
                                 </li>
