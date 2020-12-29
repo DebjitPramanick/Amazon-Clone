@@ -1,0 +1,11 @@
+.row1{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-gap: 40px;
+    margin: 30px 20px;
+}
+
+.small img{
+
+    max-height: 140px;
+}
