@@ -85,13 +85,13 @@ const Cart = (props) => {
                 <div className="card card-body">
                     <ul>
                         <li>
-                            <h2>
+                            <p>
                                 Subtotal ({cartItems.reduce((a, c) => {
                                     console.log(c.qty);
                                     return a + c.qty;
-                                }, 0)} items) : $
-                                {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
-                            </h2>
+                                }, 0)} items) : 
+                            </p>
+                            <p className="price">$ {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}</p>
                         </li>
                         <li>
                             <button type="button" onClick={checkOut}
