@@ -3,6 +3,10 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import userRouter from './routers/userRouter.js'
 import productRouter from './routers/productRouter.js'
+import dotenv from 'dotenv'
+
+
+dotenv.config();
 
 const app = express()
 const port = process.env.PORT || 5000;

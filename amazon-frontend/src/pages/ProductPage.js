@@ -22,7 +22,6 @@ const ProductPage = (props) => {
 
     useEffect(() => {
         dispatch(detailsProduct(productID));
-        console.log(productID);
     }, [dispatch,productID]);
 
 
@@ -68,7 +67,6 @@ const ProductPage = (props) => {
                                     <li>
                                         <p>Total amount</p>
                                         <div className="price">${product.price*qty}</div>
-                                        {console.log(product.price)}
                                     </li>
                                     <li>
                                         <p>Stock</p>
