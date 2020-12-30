@@ -11,6 +11,7 @@ const ProductPage = (props) => {
 
     const dispatch = useDispatch();
     const productID = props.match.params.id;
+    
 
     const productDetails = useSelector((state) => state.productDetails);
     const {loading,error,product} = productDetails;
@@ -21,6 +22,7 @@ const ProductPage = (props) => {
 
     useEffect(() => {
         dispatch(detailsProduct(productID));
+        console.log(productID);
     }, [dispatch,productID]);
 
 
