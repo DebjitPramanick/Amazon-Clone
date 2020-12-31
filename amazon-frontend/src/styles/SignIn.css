@@ -2,12 +2,15 @@
     max-width: 600px;
     margin: auto;
     transform: translateY(50%);
+}
+
+.signin-container .form{
+    margin: 0 30px;
     padding: 40px;
     border: solid 2px grey;
     border-radius: 4px;
     background-color: rgb(238, 238, 238);
 }
-
 
 .form-ip-sec{
     margin: 20px 0;
