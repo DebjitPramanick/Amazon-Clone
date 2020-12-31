@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Link} from 'react-router-dom';
 import '../styles/Header.css'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { signout } from '../actions/USerAction';
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
@@ -10,12 +11,31 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 const Header = () => {
 
+    const dispatch = useDispatch();
+
+    const [dropdown, setDropDown] = useState(false)
+
+
+    const showDropDown = () =>{
+        if(dropdown) {
+            setDropDown(false);
+        }
+        else{
+            setDropDown(true);
+        }
+    }
+
+
     const cart = useSelector((state) => state.cart);
     const {cartItems} = cart;
 
 
     const userSignin = useSelector((state) => state.userSignin);
     const { userInfo } = userSignin;
+
+    const signOutHandler = () =>{
+        dispatch(signout());
+    }
 
 
     return (
@@ -38,11 +58,27 @@ const Header = () => {
                         <li>
                             {
                                 userInfo ? (
-                                    <div>
-                                        <Link to="#">
+                                    <div className="header-dropdown">
+                                        
+                                        <p to="#" onClick={showDropDown}>
                                             {userInfo.name}
                                             <ArrowDropDownIcon/>
-                                        </Link>
+                                        </p>
+
+                                        <ul className={ dropdown? 'dropdown-content show' : 'dropdown-content'}>
+                                            <li>
+                                               <Link to="/signout" onClick={signOutHandler}>Sign out</Link> 
+                                            </li>
+                                            <li>
+                                               <Link to="/signout" onClick={signOutHandler}>Sign out</Link> 
+                                            </li>
+                                            <li>
+                                               <Link to="/signout" onClick={signOutHandler}>Sign out</Link> 
+                                            </li>
+                                            <li>
+                                               <Link to="/signout" onClick={signOutHandler}>Sign out</Link> 
+                                            </li>
+                                        </ul>
                                     </div>
                                     
                                 ) :

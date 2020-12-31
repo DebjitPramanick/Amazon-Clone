@@ -55,13 +55,49 @@ header .nav-links li {
   margin-right: 30px;
 }
 
-header .nav-links li:nth-child(2){
+.header-dropdown{
   border: solid 1px white;
   padding: 6px 10px;
   border-radius: 6px;
+  position: relative;
+  color: white;
 }
 
-.nav-links li a{
+.header-dropdown p{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-content{
+  background-color: #131A22;
+  position: absolute;
+  display: none;
+  right: 0;
+  width: 100%;
+  margin-top: 20px;
+  border: solid 1px white;
+  border-radius: 6px;
+}
+
+.dropdown-content li{
+  margin: 14px;
+}
+
+.dropdown-content.show{
+  background-color: #131A22;
+  position: absolute;
+  display: block;
+  right: 0;
+  width: 100%;
+  margin-top: 20px;
+  border: solid 1px white;
+  border-radius: 6px;
+}
+
+
+.nav-links li a {
   display: flex;
   align-items: center;
   justify-content: space-between;
