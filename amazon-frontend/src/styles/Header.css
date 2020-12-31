@@ -61,6 +61,15 @@ header .nav-links li {
   justify-content: space-between;
 }
 
+.header-user-name{
+  padding: 10px;
+  background-color: #f0c040;
+  margin-left: 14px;
+  font-size: 14px;
+  color: black;
+  border-radius: 4px;
+}
+
 .badge{
   background-color: red;
   color: white;

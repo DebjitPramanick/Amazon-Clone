@@ -12,6 +12,10 @@ const Header = () => {
     const {cartItems} = cart;
 
 
+    const userSignin = useSelector((state) => state.userSignin);
+    const {userInfo} = userSignin;
+
+
     return (
         <header>
             <div className="container">
@@ -29,7 +33,17 @@ const Header = () => {
                                 }
                             </Link>
                         </li>
-                        <li><Link to="/sign-in"><AccountCircleIcon/></Link></li>
+                        <li>
+                            {
+                                userInfo ? (
+                                    <Link to="#">Welcome <span className="header-user-name">{userInfo.name}</span></Link>
+                                ) :
+                                (
+                                    <Link to="/sign-in"><AccountCircleIcon/></Link>
+                                )
+                            }
+                        </li>
+                            
                     </ul>
                 </div>
             </div>
