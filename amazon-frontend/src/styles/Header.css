@@ -55,6 +55,12 @@ header .nav-links li {
   margin-right: 30px;
 }
 
+header .nav-links li:nth-child(2){
+  border: solid 1px white;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
 .nav-links li a{
   display: flex;
   align-items: center;
@@ -62,12 +68,7 @@ header .nav-links li {
 }
 
 .header-user-name{
-  padding: 10px;
-  background-color: #f0c040;
   margin-left: 14px;
-  font-size: 14px;
-  color: black;
-  border-radius: 4px;
 }
 
 .badge{

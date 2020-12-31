@@ -6,6 +6,8 @@ import { useSelector } from 'react-redux';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+
 const Header = () => {
 
     const cart = useSelector((state) => state.cart);
@@ -13,7 +15,7 @@ const Header = () => {
 
 
     const userSignin = useSelector((state) => state.userSignin);
-    const {userInfo} = userSignin;
+    const { userInfo } = userSignin;
 
 
     return (
@@ -36,7 +38,13 @@ const Header = () => {
                         <li>
                             {
                                 userInfo ? (
-                                    <Link to="#">Welcome <span className="header-user-name">{userInfo.name}</span></Link>
+                                    <div>
+                                        <Link to="#">
+                                            {userInfo.name}
+                                            <ArrowDropDownIcon/>
+                                        </Link>
+                                    </div>
+                                    
                                 ) :
                                 (
                                     <Link to="/sign-in"><AccountCircleIcon/></Link>

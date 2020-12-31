@@ -9,6 +9,11 @@ const initialState = {
         cartItems: localStorage.getItem('cartItems')
          ? JSON.parse(localStorage.getItem('cartItems'))
          : [],
+    },
+    userSignin:{
+        userInfo: localStorage.getItem('userInfo')
+         ? JSON.parse(localStorage.getItem('userInfo'))
+         : null,
     }
 };
 const reducer = combineReducers({
