@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
+import { useDispatch } from 'react-redux';
 import {Link} from 'react-router-dom'
+import { signin } from '../actions/USerAction';
 import "../styles/SignIn.css"
 
 const SignIn = () => {
@@ -7,8 +9,13 @@ const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+
+    const dispatch = useDispatch();
+
     const submitForm = (e) => {
         e.preventDefault();
+
+        dispatch(signin(email,password));
     }
 
 
