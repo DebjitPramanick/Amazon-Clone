@@ -1,0 +1,50 @@
+.signin-container{
+    max-width: 600px;
+    margin: auto;
+    transform: translateY(50%);
+    padding: 40px;
+    border: solid 2px grey;
+    border-radius: 4px;
+    background-color: rgb(238, 238, 238);
+}
+
+
+.form-ip-sec{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-ip-sec label{
+    color: rgb(78, 78, 78);
+    font-size: 14px;
+}
+
+.form-ip-sec input{
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.submit-btn{
+    background-color: #f0c040;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 18px;
+    outline: 0;
+}
+
+.new-user-register{
+    margin-top: 30px;
+    font-size: 16px;
+}
+.new-user-register a{
+    color: blue;
+    margin-left: 6px;
+}
