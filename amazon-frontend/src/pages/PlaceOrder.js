@@ -139,9 +139,12 @@ const PlaceOrder = (props) => {
                                     Place order
                                 </button>
                             </li>
+                            <li>
+                                {loading && <LoadingBox></LoadingBox>}
+                                {error && <MessageBox variant="danger"></MessageBox>}
+                            </li>
 
-                            {loading && <LoadingBox></LoadingBox>}
-                            {error && <MessageBox variant="danger"></MessageBox>}
+                            
                         </ul>
                     </div>
                 </div>

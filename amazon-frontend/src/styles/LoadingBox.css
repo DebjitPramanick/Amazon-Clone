@@ -1,18 +1,12 @@
 .loading-box{
     margin: auto;
-    transform: translateY(50%);
     text-align: center;
-    padding: 40px;
+    background-color: white;
+    width: 100%;
+    padding: 30px 0;
 }
 
 .loading-box > .MuiSvgIcon-root{
     color: orange;
     font-size: 40px !important;
-
-}
-
-.loading-box p{
-    margin-top: 16px;
-    font-size: 20px;
-    color: grey;
 }
