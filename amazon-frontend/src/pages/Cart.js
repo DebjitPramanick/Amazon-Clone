@@ -31,7 +31,7 @@ const Cart = (props) => {
     }
 
     const checkOut =() =>{
-        props.history.push("/signin?redirect=shipping")
+        props.history.push('/shipping');
     }
 
     return (
@@ -90,7 +90,6 @@ const Cart = (props) => {
                         <li>
                             <p>
                                 Subtotal ({cartItems.reduce((a, c) => {
-                                    console.log(c.qty);
                                     return a + c.qty;
                                 }, 0)} items) : 
                             </p>

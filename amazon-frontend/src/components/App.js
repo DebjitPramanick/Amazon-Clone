@@ -6,6 +6,7 @@ import ProductPage from '../pages/ProductPage'
 import Cart from '../pages/Cart';
 import SignIn from '../pages/SignIn'
 import Register from "../pages/Register"
+import ShippingAddress from '../pages/ShippingAddress';
 
 const App = () => {
 
@@ -21,6 +22,7 @@ const App = () => {
                 <Route exact path="/sign-in" component={SignIn}></Route>
                 <Route exact path="/register" component={Register}></Route>
                 <Route path="/products/product/:id" component={ProductPage}></Route>
+                <Route path="/shipping" component={ShippingAddress}></Route>
                 <Route path="/" component={Home} exact></Route>
             </Switch>
             

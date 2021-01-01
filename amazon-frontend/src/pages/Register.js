@@ -98,7 +98,7 @@ const Register = (props) => {
                     <label/>
                     <div>
                         Already have an account?
-                        <Link to="/register">
+                        <Link to={`/signin?redirect=${redirect}`}>
                             Sign In
                         </Link>
                     </div>
