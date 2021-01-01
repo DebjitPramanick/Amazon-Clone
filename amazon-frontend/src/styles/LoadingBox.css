@@ -2,6 +2,7 @@
     margin: auto;
     transform: translateY(50%);
     text-align: center;
+    padding: 40px;
 }
 
 .loading-box > .MuiSvgIcon-root{
