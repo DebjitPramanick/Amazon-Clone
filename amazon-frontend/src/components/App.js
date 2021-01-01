@@ -7,6 +7,8 @@ import Cart from '../pages/Cart';
 import SignIn from '../pages/SignIn'
 import Register from "../pages/Register"
 import ShippingAddress from '../pages/ShippingAddress';
+import PaymentMethod from '../pages/PaymentMethod';
+import PlaceOrder from '../pages/PlaceOrder';
 
 const App = () => {
 
@@ -23,6 +25,8 @@ const App = () => {
                 <Route exact path="/register" component={Register}></Route>
                 <Route path="/products/product/:id" component={ProductPage}></Route>
                 <Route path="/shipping" component={ShippingAddress}></Route>
+                <Route path="/payment" component={PaymentMethod}></Route>
+                <Route path="/placeorder" component={PlaceOrder}></Route>
                 <Route path="/" component={Home} exact></Route>
             </Switch>
             
