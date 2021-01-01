@@ -27,13 +27,13 @@ const ShippingAddress = (props) => {
     const submitHandler = (e) =>{
         e.preventDefault();
 
-        dispatch(saveShippingAddress(
+        dispatch(saveShippingAddress({
             fullName,
             address,
             city,
             postalcode,
             country
-        ));
+        }));
 
         props.history.push('/payment');
     }
@@ -49,7 +49,7 @@ const ShippingAddress = (props) => {
                     </div>
 
                     <div className="form-ip-sec">
-                        <label htmlFor="fullName"></label>
+                        <label htmlFor="fullName">Full name:</label>
                         <input type="text" id="fullName" placeholder="Enter full name"
                         value={fullName} onChange={(e) => setFullName(e.target.value)}
                         required>
@@ -57,7 +57,7 @@ const ShippingAddress = (props) => {
                     </div>
 
                     <div className="form-ip-sec">
-                        <label htmlFor="address"></label>
+                        <label htmlFor="address">Address:</label>
                         <input type="text" id="address" placeholder="Enter address"
                         value={address} onChange={(e) => setAddress(e.target.value)}
                         required>
@@ -65,7 +65,7 @@ const ShippingAddress = (props) => {
                     </div>
 
                     <div className="form-ip-sec">
-                        <label htmlFor="city"></label>
+                        <label htmlFor="city">City:</label>
                         <input type="text" id="city" placeholder="Enter city"
                         value={city} onChange={(e) => setCity(e.target.value)}
                         required>
@@ -73,7 +73,7 @@ const ShippingAddress = (props) => {
                     </div>
 
                     <div className="form-ip-sec">
-                        <label htmlFor="postalcode"></label>
+                        <label htmlFor="postalcode">Postal Code:</label>
                         <input type="text" id="postalcode" placeholder="Enter postalcode"
                         value={postalcode} onChange={(e) => setPostalCode(e.target.value)}
                         required>
@@ -81,7 +81,7 @@ const ShippingAddress = (props) => {
                     </div>
 
                     <div className="form-ip-sec">
-                        <label htmlFor="country"></label>
+                        <label htmlFor="country">Country:</label>
                         <input type="text" id="country" placeholder="Enter country"
                         value={country} onChange={(e) => setCountry(e.target.value)}
                         required>
