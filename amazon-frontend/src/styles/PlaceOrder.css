@@ -15,12 +15,16 @@
 
 .order-row1{
     width: 100%;
-    grid-template-columns: repeat(3,1fr);
-    background-color:rgb(185, 185, 185);
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color:white;
 }
 
 .order-row1 p{
     font-weight: 600;
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    padding: 16px 6px;
+    border: 1px solid gray
 }
 
 .placeorder-btn{
