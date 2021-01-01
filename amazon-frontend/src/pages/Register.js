@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import { register} from '../actions/USerAction';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-import "../styles/SignIn.css"
+import "../styles/Register.css"
 
 const Register = (props) => {
 
@@ -43,7 +43,7 @@ const Register = (props) => {
 
 
     return (
-        <div className="signin-container">
+        <div className="register-container">
             <form className="form" onSubmit={registerHandler}>
                 <div>
                     <h1>Register</h1>

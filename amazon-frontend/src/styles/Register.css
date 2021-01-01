@@ -1,0 +1,5 @@
+.register-container{
+    max-width: 600px;
+    margin: auto;
+    transform: translateY(20%);
+}
