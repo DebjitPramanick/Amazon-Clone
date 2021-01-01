@@ -14,7 +14,7 @@
 
 .row1{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 0.3fr;
     grid-gap: 20px;
     margin: 20px 0;
     align-items: center;
@@ -31,11 +31,8 @@
 }
 
 .small{
-
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: lightgray;
 }
 .small img{
     height: 140px;
@@ -44,6 +41,7 @@
 .remove-btn button{
     padding: 10px 16px;
     outline: 0;
+    border: 0;
     font-size: 16px;
     cursor: pointer;
 }
@@ -68,7 +66,7 @@
 
 
 @media(max-width: 900px){
-    .row-top{
+    .row-container{
         display: flex;
         flex-direction: column;
     }

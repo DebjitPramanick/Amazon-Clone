@@ -4,6 +4,7 @@ import { addToCart,removeFromCart } from '../actions/CartAction';
 import { Link } from 'react-router-dom';
 import MessageBox from "../components/MessageBox";
 import "../styles/Cart.css"
+import CancelIcon from '@material-ui/icons/Cancel';
 
 
 const Cart = (props) => {
@@ -76,7 +77,9 @@ const Cart = (props) => {
                                             </div>
                                             <p>${item.price * item.qty}</p>
                                             <div className="remove-btn">
-                                                <button type="button" onClick={() => removeProduct(item.product)}>Remove</button>
+                                                <button type="button" onClick={() => removeProduct(item.product)}>
+                                                    <CancelIcon/>
+                                                </button>
                                             </div>
                                         </div>
                                     </li>

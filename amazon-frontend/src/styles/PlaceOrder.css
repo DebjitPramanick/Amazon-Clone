@@ -1,0 +1,37 @@
+.col-6 ul{
+    list-style-type: none;
+}
+.col-6 ul li{
+    margin-bottom: 20px;;
+}
+
+.col-6 .card-body h2 {
+    margin-bottom: 22px;
+}
+
+.col-6 .card-body p{
+    margin-top: 10px;
+}
+
+.order-row1{
+    width: 100%;
+    grid-template-columns: repeat(3,1fr);
+    background-color:rgb(185, 185, 185);
+}
+
+.order-row1 p{
+    font-weight: 600;
+}
+
+.placeorder-btn{
+    background-color: #f0c040;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 18px;
+    outline: 0;
+}
