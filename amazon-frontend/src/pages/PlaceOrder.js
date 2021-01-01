@@ -98,19 +98,19 @@ const PlaceOrder = (props) => {
                             </li>
                             <li>
                                 <p>Items</p>
-                                <p>${cart.itemsPrice}</p>
+                                <p>${cart.itemsPrice.toFixed(2)}</p>
                             </li>
                             <li>
                                 <p>Shipping</p>
-                                <p>${cart.shippingPrice}</p>
+                                <p>${cart.shippingPrice.toFixed(2)}</p>
                             </li>
                             <li>
                                 <p>Tax</p>
-                                <p>${cart.taxPrice}</p>
+                                <p>${cart.taxPrice.toFixed(2)}</p>
                             </li>
                             <li>
                                 <p><strong>Total</strong></p>
-                                <p><strong>${cart.totalPrice}</strong></p>
+                                <p><strong>${cart.totalPrice.toFixed(2)}</strong></p>
                             </li>
 
                             <li>
