@@ -17,6 +17,8 @@ const Cart = (props) => {
     const cart = useSelector((state) => state.cart);
     const { cartItems, error } = cart;
 
+    console.log(productID);
+
     const dispatch = useDispatch();
 
     useEffect(() => {

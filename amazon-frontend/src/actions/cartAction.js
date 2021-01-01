@@ -3,9 +3,6 @@ import { CART_ADD_ITEM, CART_REMOVE_ITEM, CART_SAVE_SHIPPING_ADDRESS } from "../
 
 export const addToCart = (productID,qty) => async(dispatch, getState) =>{
     const {data} = await axios.get(`/api/products/${productID}`);
-    const {
-        cart : {cartItems},
-    } = getState();
 
     dispatch({
         type: CART_ADD_ITEM,
@@ -14,7 +11,7 @@ export const addToCart = (productID,qty) => async(dispatch, getState) =>{
             image: data.image,
             price: data.price,
             stock: data.stock,
-            product: data.id,
+            product: data._id,
             qty,
         }
     })
