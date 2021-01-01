@@ -4,6 +4,7 @@ import cors from 'cors'
 import userRouter from './routers/userRouter.js'
 import productRouter from './routers/productRouter.js'
 import dotenv from 'dotenv'
+import orderRouter from './routers/orderRouter.js'
 
 
 dotenv.config();
@@ -27,6 +28,7 @@ app.use(cors());
 
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
+app.use("/api/orders", orderRouter);
 
 app.get('/',(req,res)=>res.status(200).send('Hello Debjit here. It is Amazon clone project.'))
 
