@@ -6,7 +6,6 @@ const LoadingBox = () => {
     return (
         <div className="loading-box">
             <LoopIcon/>
-            <p>Loading products....</p>
         </div>
     )
 }
