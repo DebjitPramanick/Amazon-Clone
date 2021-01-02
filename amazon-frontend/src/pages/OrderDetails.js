@@ -4,7 +4,7 @@ import "../styles/PlaceOrder.css"
 import { Link } from 'react-router-dom'
 import LoadingBox from "../components/LoadingBox"
 import MessageBox from "../components/MessageBox"
-import { detailsOrder } from '../actions/OrderAction'
+import { detailsOrder, payOrder } from '../actions/OrderAction'
 import "../styles/OrderDetails.css"
 import axios from 'axios'
 import {PayPalButton} from 'react-paypal-button-v2'
@@ -16,8 +16,10 @@ const OrderDetails = (props) => {
     const orderDetails = useSelector((state) => state.orderDetails);
     const {order, loading, error} = orderDetails;
     const dispatch = useDispatch();
-    
-    console.log(order);
+
+    const orderPay = useSelector((state) => state.orderPay);
+    const {loading: loadingPay, error: errorPay, success: successPay} = orderPay;
+
 
     useEffect(() => {
         
@@ -34,7 +36,7 @@ const OrderDetails = (props) => {
             document.body.appendChild(script);
         };
 
-        if(!order){
+        if(!order || successPay || (order && order._id != orderID)){
             dispatch(detailsOrder(orderID));
         }
         else{
@@ -51,8 +53,8 @@ const OrderDetails = (props) => {
     }, [dispatch, orderID, sdkReady, order]);
 
 
-    const successPaymentHandler = () =>{
-        //Pay order
+    const successPaymentHandler = (paymentResult) =>{
+        dispatch(payOrder(order, paymentResult));
     }
 
 
@@ -154,9 +156,14 @@ const OrderDetails = (props) => {
 
                                             !sdkReady?
                                             (<LoadingBox></LoadingBox>)
-                                            : (<PayPalButton amount={order.totalPrice}
+                                            : (
+                                            <>
+                                            {errorPay && <MessageBox variant="danger"></MessageBox>}
+                                            {loadingPay && <LoadingBox></LoadingBox>}
+                                            <PayPalButton amount={order.totalPrice}
                                             onSuccess={successPaymentHandler}>
-                                            </PayPalButton>)
+                                            </PayPalButton></>
+                                            )
                                 }
                             </div>
 

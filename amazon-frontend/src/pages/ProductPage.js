@@ -57,7 +57,7 @@ const ProductPage = (props) => {
                                 <li className="pd-price">${product.price}</li>
                                 <li className="pd-desc">
                                     Description :
-                                    <p>{product.desc}</p>
+                                    <p>{product.description}</p>
                                 </li>
                             </ul>
                         </div>
