@@ -8,6 +8,7 @@ import { detailsOrder, payOrder } from '../actions/OrderAction'
 import "../styles/OrderDetails.css"
 import axios from 'axios'
 import {PayPalButton} from 'react-paypal-button-v2'
+import { ORDER_PAY_RESET } from '../constants/OrderConstant'
 
 const OrderDetails = (props) => {
 
@@ -37,6 +38,9 @@ const OrderDetails = (props) => {
         };
 
         if(!order || successPay || (order && order._id != orderID)){
+            dispatch({
+                type: ORDER_PAY_RESET
+            })
             dispatch(detailsOrder(orderID));
         }
         else{

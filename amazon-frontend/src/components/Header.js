@@ -67,7 +67,10 @@ const Header = () => {
 
                                         <ul className={ dropdown? 'dropdown-content show' : 'dropdown-content'}>
                                             <li>
-                                               <Link to="/profile" onClick={signOutHandler}>Account</Link> 
+                                               <Link to="/profile">Account</Link> 
+                                            </li>
+                                            <li>
+                                               <Link to="/orderhistory">Order History</Link> 
                                             </li>
                                             <li>
                                                <Link to="/" onClick={signOutHandler}>Sign out</Link> 
