@@ -22,7 +22,7 @@ const OrderDetails = (props) => {
     useEffect(() => {
         
         const addPayPalScript = async () => {
-            const { data } = await axios.get('api/config/paypal');
+            const { data } = await axios.get('/api/config/paypal');
             const script = document.createElement('script');
 
             script.type = "text/javascript";
@@ -34,7 +34,7 @@ const OrderDetails = (props) => {
             document.body.appendChild(script);
         };
 
-        if(!order._id){
+        if(!order){
             dispatch(detailsOrder(orderID));
         }
         else{
@@ -47,8 +47,6 @@ const OrderDetails = (props) => {
                 }
             }
         }
-
-        dispatch(detailsOrder(orderID));
         
     }, [dispatch, orderID, sdkReady, order]);
 
@@ -150,18 +148,17 @@ const OrderDetails = (props) => {
                                 <p><strong>${order.totalPrice.toFixed(2)}</strong></p>
                             </li>
 
-                            {
-                                !order.isPaid && (
-                                    <li>
-                                        {!sdkReady?
-                                        (<LoadingBox></LoadingBox>)
-                                        : (<PayPalButton amount={order.totalPrice}
-                                        onSuccess={successPaymentHandler}>
-                                        </PayPalButton>)
-                                    }
-                                    </li>
-                                )
-                            }
+                            <div className="order-page-pay-btn">
+                                {
+                                    !order.isPaid && 
+
+                                            !sdkReady?
+                                            (<LoadingBox></LoadingBox>)
+                                            : (<PayPalButton amount={order.totalPrice}
+                                            onSuccess={successPaymentHandler}>
+                                            </PayPalButton>)
+                                }
+                            </div>
 
                         </ul>
                     </div>
