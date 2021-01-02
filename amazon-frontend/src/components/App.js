@@ -9,6 +9,7 @@ import Register from "../pages/Register"
 import ShippingAddress from '../pages/ShippingAddress';
 import PaymentMethod from '../pages/PaymentMethod';
 import PlaceOrder from '../pages/PlaceOrder';
+import OrderDetails from "../pages/OrderDetails"
 
 const App = () => {
 
@@ -27,6 +28,7 @@ const App = () => {
                 <Route path="/shipping" component={ShippingAddress}></Route>
                 <Route path="/payment" component={PaymentMethod}></Route>
                 <Route path="/placeorder" component={PlaceOrder}></Route>
+                <Route path="/order/:id" component={OrderDetails}></Route>
                 <Route path="/" component={Home} exact></Route>
             </Switch>
             

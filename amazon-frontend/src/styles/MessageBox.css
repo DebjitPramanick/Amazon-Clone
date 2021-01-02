@@ -2,10 +2,11 @@
   color: #a02020;
 }
 .alert {
-  padding: 1rem;
+  padding: 16px;
   border: 0.1rem solid transparent;
   border-radius: 0.5rem;
-  background-color: #ffe0e0;
+  background-color: #ffbebe;
+  margin-top: 16px;
 }
 .alert-info {
   color: #2020a0;
@@ -13,7 +14,7 @@
 }
 .alert-danger {
   color: #a02020;
-  background-color: #ffe0e0;
+  background-color: #c21212;
 }
 .alert-success {
   color: #20a020;
