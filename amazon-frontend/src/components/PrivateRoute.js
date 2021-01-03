@@ -12,7 +12,7 @@ const PrivateRoute = ({component: Component, ...rest}) => {
             <Route 
             {...rest}
             render={(props) =>
-                userInfo? (
+                userInfo && userInfo.isAdmin? (
                     <Component {...props}></Component>
                 ) : (
                     <Redirect to="/signin"/>

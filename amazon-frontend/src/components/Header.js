@@ -13,16 +13,18 @@ const Header = () => {
 
     const dispatch = useDispatch();
 
-    const [dropdown, setDropDown] = useState(false)
+    const [dropdown, setDropDown] = useState(false);
+    const [secondDropdown, setSecondDropdown] = useState(false);
 
 
     const showDropDown = () =>{
-        if(dropdown) {
-            setDropDown(false);
-        }
-        else{
-            setDropDown(true);
-        }
+        if(dropdown) setDropDown(false);
+        else setDropDown(true);
+    }
+
+    const showSecondDropDown = () =>{
+        if(secondDropdown) setSecondDropdown(false);
+        else setSecondDropdown(true);
     }
 
 
@@ -60,7 +62,7 @@ const Header = () => {
                                 userInfo ? (
                                     <div className="header-dropdown">
                                         
-                                        <p to="#" onClick={showDropDown}>
+                                        <p onClick={showDropDown}>
                                             {userInfo.name}
                                             <ArrowDropDownIcon/>
                                         </p>
@@ -83,6 +85,33 @@ const Header = () => {
                                     <Link to="/signin"><AccountCircleIcon/></Link>
                                 )
                             }
+                            
+                        </li>
+
+                        <li>
+                            {userInfo && userInfo.isAdmin && (
+                                <div className="header-dropdown">
+                                    <p onClick={showSecondDropDown}>
+                                        Admin 
+                                        <ArrowDropDownIcon/>
+                                    </p>
+
+                                    <ul className={ secondDropdown? 'dropdown-content show' : 'dropdown-content'}>
+                                        <li>
+                                           <Link to="/dashboard">Dashboard</Link> 
+                                        </li>
+                                        <li>
+                                           <Link to="/productlist">Products</Link> 
+                                        </li>
+                                        <li>
+                                           <Link to="/orderlist">Orders</Link> 
+                                        </li>
+                                        <li>
+                                           <Link to="/userlist" onClick={signOutHandler}>Users</Link> 
+                                        </li>
+                                    </ul>
+                                </div>
+                            )}
                         </li>
                             
                     </ul>
