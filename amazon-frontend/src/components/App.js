@@ -11,6 +11,7 @@ import PaymentMethod from '../pages/PaymentMethod';
 import PlaceOrder from '../pages/PlaceOrder';
 import OrderDetails from "../pages/OrderDetails"
 import OrderHistory from '../pages/OrderHistory';
+import UserProfile from '../pages/UserProfile';
 
 const App = () => {
 
@@ -31,6 +32,7 @@ const App = () => {
                 <Route path="/placeorder" component={PlaceOrder}></Route>
                 <Route path="/order/:id" component={OrderDetails}></Route>
                 <Route path="/orderhistory" component={OrderHistory}></Route>
+                <Route path="/profile" component={UserProfile}></Route>
                 <Route path="/" component={Home} exact></Route>
             </Switch>
             

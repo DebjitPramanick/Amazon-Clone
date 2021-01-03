@@ -21,6 +21,15 @@
     border: 1px solid grey;
 }
 
+.table tbody tr td{
+    border: 1px solid grey;
+}
+
+.table tbody tr td:nth-child(1),
+.table tbody tr td:nth-child(3) {
+    font-weight: bold;
+}
+
 .table tbody tr:nth-of-type(odd){
     background-color: lightgray;
 }
@@ -29,7 +38,6 @@
     width: 80%;
     margin: auto;
     padding: 10px;
-    font-size: 16px;
     background-color:  #f0c040;
     margin: 20px 0;
     border-radius: 4px;
@@ -39,4 +47,5 @@
 .order-details-btn > .MuiSvgIcon-root{
     font-size: 22px !important;
     color: rgb(36, 36, 36) ;
+    font-size: 18px;
 }
