@@ -3,20 +3,23 @@ import {useDispatch, useSelector} from 'react-redux'
 import { listOrderMine } from '../actions/OrderAction'
 import LoadingBox from "../components/LoadingBox"
 import MessageBox from "../components/MessageBox"
+import "../styles/OrderHistory.css"
+import InfoIcon from '@material-ui/icons/Info';
 
 const OrderHistory = (props) => {
 
+    const dispatch = useDispatch();
     const orderMineList = useSelector((state) => state.orderMineList);
     const {loading,error,orders} = orderMineList;
 
-    const dispatch = useDispatch();
 
     useEffect(()=>{
         dispatch(listOrderMine());
     },[dispatch]);
 
+
     return (
-        <div>
+        <div className="orderhistory-container">
             <h1>Order History</h1>
             {loading? <LoadingBox></LoadingBox>
             : error? <MessageBox variant="danger">{error}</MessageBox>
@@ -34,7 +37,8 @@ const OrderHistory = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {orders.map((order)=>{
+                        {console.log(orders)}
+                        {orders.map((order)=>(
                             <tr key={order._id}>
                                 <td>{order._id}</td>
                                 <td>{order.createdAt.substring(0,10)}</td>
@@ -48,13 +52,13 @@ const OrderHistory = (props) => {
                                     : 'No'}
                                 </td>
                                 <td>
-                                    <button type="button" className=""
+                                    <button type="button" className="order-details-btn"
                                     onClick={() => props.history.push(`/order/${order._id}`)}>
-                                        Details
+                                        <InfoIcon/>
                                     </button>
                                 </td>
                             </tr>
-                        })}
+                        ))}
                     </tbody>
                 </table>
             )

@@ -1,0 +1,42 @@
+.orderhistory-container{
+    margin: 20px;
+}
+
+
+.table{
+    margin-top: 40px;
+    width: 100%;
+    border-collapse: collapse;
+    background: rgb(238, 238, 238);
+}
+
+.table thead tr th{
+    padding: 20px 0;
+    border: 1px black solid;
+}
+
+.table tbody tr{
+    text-align: center;
+    padding: 14px;
+    border: 1px solid grey;
+}
+
+.table tbody tr:nth-of-type(odd){
+    background-color: lightgray;
+}
+
+.order-details-btn{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    font-size: 16px;
+    background-color:  #f0c040;
+    margin: 20px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.order-details-btn > .MuiSvgIcon-root{
+    font-size: 22px !important;
+    color: rgb(36, 36, 36) ;
+}
