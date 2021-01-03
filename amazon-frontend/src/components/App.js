@@ -12,6 +12,7 @@ import PlaceOrder from '../pages/PlaceOrder';
 import OrderDetails from "../pages/OrderDetails"
 import OrderHistory from '../pages/OrderHistory';
 import UserProfile from '../pages/UserProfile';
+import PrivateRoute from './PrivateRoute';
 
 const App = () => {
 
@@ -32,7 +33,7 @@ const App = () => {
                 <Route path="/placeorder" component={PlaceOrder}></Route>
                 <Route path="/order/:id" component={OrderDetails}></Route>
                 <Route path="/orderhistory" component={OrderHistory}></Route>
-                <Route path="/profile" component={UserProfile}></Route>
+                <PrivateRoute path="/profile" component={UserProfile}></PrivateRoute>
                 <Route path="/" component={Home} exact></Route>
             </Switch>
             

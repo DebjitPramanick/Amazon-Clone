@@ -61,6 +61,7 @@ header .nav-links li {
   border-radius: 6px;
   position: relative;
   color: white;
+  min-width: 160px;
 }
 
 .header-dropdown p{
