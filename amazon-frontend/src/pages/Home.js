@@ -39,8 +39,7 @@ const Home = () => {
                 </Slider>
             
             </div>
-
-
+            
             <ProductList/>
         </div>
     )

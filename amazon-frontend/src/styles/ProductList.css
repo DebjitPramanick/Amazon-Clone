@@ -6,6 +6,13 @@
     padding: 40px;
 }
 
+.sec-title{
+    margin: 100px 40px 0 40px;
+    border: 1px solid grey;
+    padding: 20px;
+    background-color: rgb(238, 238, 238);
+}
+
 
 @media(max-width: 900px){
     .product-container{

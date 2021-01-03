@@ -27,6 +27,8 @@ const ProductList = () => {
             error ? <MessageBox variant="danger">{error}</MessageBox>
             :
             (
+                <>
+                <h1 className="sec-title">Products</h1>
                 <div className="product-container">
                     {products.map((product)=>{
                         return(
@@ -35,6 +37,7 @@ const ProductList = () => {
                         })
                     }
                 </div>
+                </>
             )
             }
 

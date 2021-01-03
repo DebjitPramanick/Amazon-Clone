@@ -36,9 +36,6 @@ app.get('/api/config/paypal', (req,res)=>{
 app.get('/',(req,res)=>res.status(200).send('Hello Debjit here. It is Amazon clone project.'))
 
 
-
-
-
 // Listening to  server
 
 app.listen(port,()=>console.log(`Listening on local host:${port}`))
