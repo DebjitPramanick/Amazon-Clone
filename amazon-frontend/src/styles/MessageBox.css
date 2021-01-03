@@ -14,9 +14,9 @@
 }
 .alert-danger {
   color: #a02020;
-  background-color: #c21212;
+  background-color:#ffbebe;
 }
 .alert-success {
-  color: #20a020;
-  background-color: #eeffe0;
+  color: #109710;
+  background-color: #beff89 !important;
 }
