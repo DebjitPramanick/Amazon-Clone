@@ -11,3 +11,18 @@
     width: 100%;
     height: 100%;
 }
+
+
+.slides .slick-prev,
+.slides .slick-next {
+  top: 50%;
+}
+
+.slick-next{
+  margin-right: 5%;
+}
+
+.slick-prev{
+  margin-left: 5%;
+  z-index: 99;
+}

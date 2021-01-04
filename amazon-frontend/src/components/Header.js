@@ -140,6 +140,15 @@ const Header = (props) => {
                             
                     </ul>
                 </div>
+
+                <div className="category-container">
+                    <ul>
+                        <li><Link to="/">Mobile</Link></li>
+                        <li><Link to="/">Laptop</Link></li>
+                        <li><Link to="/">Monitor</Link></li>
+                        <li><Link to="/">Computer Accessories</Link></li>
+                    </ul>
+                </div>
             </div>
         </header>
     )

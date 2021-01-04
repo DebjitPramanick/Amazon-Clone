@@ -21,6 +21,26 @@ header .inner-content {
   padding: 14px 22px;
 }
 
+.category-container{
+  background-color: #232F3E;
+  padding: 14px 22px;
+  font-weight: 500;
+  color: white;
+}
+
+.category-container ul{
+  list-style-type: none;
+}
+
+.category-container ul li{
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.category-container ul li a{
+  font-size: 18px;
+}
+
 @media(max-width: 760px){
   header .inner-content{flex-direction: column !important;}
   .brand{margin-bottom: 30px;}
