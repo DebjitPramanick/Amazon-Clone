@@ -42,6 +42,32 @@ header .brand a {
   font-size: 1.5rem;
 }
 
+
+.search-bar{
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 60%;
+}
+
+.search-input{
+  padding: 12px;
+  font-size: 18px;
+  width: 100%;
+  outline: 0;
+  border: 0;
+}
+
+.search-btn{
+  background-color:  #f0c040;
+  cursor: pointer;
+  padding: 5px;
+  text-align: center;
+}
+
+
+
 header .nav-links {
   padding: 0;
   margin: 0;

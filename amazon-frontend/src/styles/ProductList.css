@@ -1,16 +1,21 @@
+.home-product-container{
+    max-width: 1600px;
+    margin: 80px auto;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .product-container{
-    margin-top: 60px;
+    margin: 60px 26px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px;
-    padding: 40px;
 }
 
 .sec-title{
-    margin: 100px 40px 0 40px;
-    border: 1px solid grey;
-    padding: 20px;
-    background-color: rgb(238, 238, 238);
+    margin: 26px;
+    color: rgb(88, 88, 88);
 }
 
 

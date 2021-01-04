@@ -8,6 +8,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import SearchIcon from '@material-ui/icons/Search';
 
 const Header = () => {
 
@@ -40,12 +41,28 @@ const Header = () => {
     }
 
 
+    const [query, setQuery] = useState('');
+
+    const searchProduct = () =>{
+        //To-DO
+    }
+
+
     return (
         <header>
             <div className="container">
                 <div className="inner-content">
                     <div className="brand">
                         <Link to="/">Amazon Clone</Link>
+                    </div>
+
+                    <div className="search-bar">
+                        <input className="search-input"
+                        onChange={(e)=> setQuery(e.target.value)}
+                        placeholder="Search products"></input>
+                        <button className="search-btn"
+                        onClick={searchProduct}
+                        ><SearchIcon/></button>
                     </div>
 
                     <ul className="nav-links">

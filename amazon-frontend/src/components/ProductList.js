@@ -21,14 +21,14 @@ const ProductList = () => {
 
     return (
 
-        <div>
+        <div className="home-product-container">
             {loading ? <LoadingBox />
             :
             error ? <MessageBox variant="danger">{error}</MessageBox>
             :
             (
                 <>
-                <h1 className="sec-title">Products</h1>
+                <h2 className="sec-title">Products</h2>
                 <div className="product-container">
                     {products.map((product)=>{
                         return(

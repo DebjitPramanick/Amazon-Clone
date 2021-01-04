@@ -1,4 +1,9 @@
+body{
+    background-color: rgb(219, 219, 219);
+}
 .banner-container{
+    max-width: 1600px;
+    margin: auto;
     margin-bottom: 40px;
 }
 .banners{
