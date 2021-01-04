@@ -22,34 +22,40 @@ const SearchResults = (props) => {
         dispatch(listProducts());
     }, [dispatch])
 
-    console.log(products);
-    
-    
-    /*const filterProducts = products.filter((product)=>{
-        return product.name.toLowerCase().includes(query.toLowerCase());
-    });*/
 
     return (
-        <div className="home-product-container">
-            {loading ? <LoadingBox />
-            :
-            error ? <MessageBox variant="danger">{error}</MessageBox>
-            :
-            (
-                <>
-                <h2 className="sec-title">Products</h2>
-                <div className="product-container">
-                    {products.map((product)=>(
-                            product.name.toLowerCase().includes(query.toLowerCase()) && (
-                                <Product key={product._id} product={product} /> 
-                            )
-                        ))
-                    }
-                </div>
-                </>
-            )
-            }
+        <div className="search-page-container">
 
+            <div className="filter-options-container">
+                This is filter option container.
+
+                <h2>Filter option 1</h2>
+                <h2>Filter option 2</h2>
+                <h2>Filter option 3</h2>
+                
+            </div>
+
+            <div className="search-page-product-container">
+                {loading ? <LoadingBox />
+                :
+                error ? <MessageBox variant="danger">{error}</MessageBox>
+                :
+                (
+                    <>
+                    <h2 className="sec-title">Results</h2>
+                    <div className="search-product-container">
+                        {products.map((product)=>(
+                                product.name.toLowerCase().includes(query.toLowerCase()) && (
+                                    <Product key={product._id} product={product} /> 
+                                )
+                            ))
+                        }
+                    </div>
+                    </>
+                )
+                }
+
+            </div>
         </div>
     )
 }

@@ -1,0 +1,27 @@
+.search-page-container{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 40px;
+}
+
+.filter-options-container{
+    background-color: rgb(235, 235, 235);
+    border: 1px solid grey;
+    padding: 20px;
+}
+
+.search-page-product-container{
+    background-color: rgb(235, 235, 235);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.search-product-container{
+    margin: 60px 26px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+
+
