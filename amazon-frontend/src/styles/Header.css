@@ -46,7 +46,7 @@ header .brand a {
 .search-bar{
   display: flex;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
   width: 60%;
 }
@@ -62,8 +62,10 @@ header .brand a {
 .search-btn{
   background-color:  #f0c040;
   cursor: pointer;
-  padding: 5px;
+  padding: 6px;
   text-align: center;
+  outline: 0;
+  border: 0;
 }
 
 

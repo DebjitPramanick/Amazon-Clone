@@ -10,7 +10,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import SearchIcon from '@material-ui/icons/Search';
 
-const Header = () => {
+const Header = (props) => {
 
     const dispatch = useDispatch();
 
@@ -44,7 +44,9 @@ const Header = () => {
     const [query, setQuery] = useState('');
 
     const searchProduct = () =>{
-        //To-DO
+        /*if(query){
+            props.history.push(`/searchresults/${query}`);
+        }*/
     }
 
 
@@ -59,10 +61,15 @@ const Header = () => {
                     <div className="search-bar">
                         <input className="search-input"
                         onChange={(e)=> setQuery(e.target.value)}
-                        placeholder="Search products"></input>
-                        <button className="search-btn"
-                        onClick={searchProduct}
-                        ><SearchIcon/></button>
+                        placeholder="Search products"
+                        value={query}>
+                        </input>
+
+                        <Link to={`/searchresults/${query}`}>
+                            <button className="search-btn"
+                            onClick={searchProduct}
+                            ><SearchIcon/></button>
+                        </Link>
                     </div>
 
                     <ul className="nav-links">

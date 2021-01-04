@@ -13,6 +13,7 @@ import OrderDetails from "../pages/OrderDetails"
 import OrderHistory from '../pages/OrderHistory';
 import UserProfile from '../pages/UserProfile';
 import PrivateRoute from './PrivateRoute';
+import SearchResults from '../pages/SearchResults';
 
 const App = () => {
 
@@ -34,6 +35,7 @@ const App = () => {
                 <Route path="/order/:id" component={OrderDetails}></Route>
                 <Route path="/orderhistory" component={OrderHistory}></Route>
                 <PrivateRoute path="/profile" component={UserProfile}></PrivateRoute>
+                <Route path="/searchresults/:query" component={SearchResults} exact></Route>
                 <Route path="/" component={Home} exact></Route>
             </Switch>
             
