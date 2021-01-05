@@ -11,42 +11,35 @@ import {prices} from "../data/priceRanges";
 
 const SearchResults = (props) => {
 
-    const query = props.match.params.query;
+    const [range, setRange] = useState([]);
 
+    const query = props.match.params.query;
+    
     const dispatch = useDispatch();
 
     const productList = useSelector( state => state.productList);
     const {loading,error,products} = productList;
 
 
-     const [Filters, setFilters] = useState({
-        price: []
-    })
-
     useEffect(() => {
         dispatch(listProducts());
     }, [dispatch])
 
 
-    const handlePrice = (value) => {
+
+    const handleFilters = (filters, category) => {
+
         const data = prices;
         let array = [];
 
         for (let key in data) {
-
-            if (data[key].id === parseInt(value, 10)) {
+            if (data[key].id === parseInt(filters, 10)) {
                 array = data[key].array;
             }
         }
-        console.log('array', array);
-        return array;
+        setRange(array);
     }
 
-    const handleFilters = (filters, category) => {
-        if(category === "pricerange"){
-            let priceValues = handlePrice(filters);
-        }
-    }
 
 
     return (
@@ -73,10 +66,13 @@ const SearchResults = (props) => {
                     <>
                     <h2 className="sec-title">Search results for "{query}"</h2>
                     <div className="search-product-container">
-                        {products.map((product)=>(
-                                product.name.toLowerCase().includes(query.toLowerCase()) && (
-                                    <Product key={product._id} product={product} /> 
-                                )
+
+                        {products.filter(product=>
+                                product.name.toLowerCase().includes(query.toLowerCase())
+                                && product.price <= range[1]
+                                && product.price >= range[0]
+                            ).map(filteredProduct => (
+                                <Product key={filteredProduct._id} product={filteredProduct} />
                             ))
                         }
                     </div>
