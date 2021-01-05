@@ -40,15 +40,7 @@ const Header = (props) => {
         dispatch(signout());
     }
 
-
     const [query, setQuery] = useState('');
-
-    const searchProduct = () =>{
-        /*if(query){
-            props.history.push(`/searchresults/${query}`);
-        }*/
-    }
-
 
     return (
         <header>
@@ -67,7 +59,6 @@ const Header = (props) => {
 
                         <Link to={`/searchresults/${query}`}>
                             <button className="search-btn"
-                            onClick={searchProduct}
                             ><SearchIcon/></button>
                         </Link>
                     </div>
@@ -131,7 +122,7 @@ const Header = (props) => {
                                            <Link to="/orderlist">Orders</Link> 
                                         </li>
                                         <li>
-                                           <Link to="/userlist" onClick={signOutHandler}>Users</Link> 
+                                           <Link to="/userlist">Users</Link> 
                                         </li>
                                     </ul>
                                 </div>

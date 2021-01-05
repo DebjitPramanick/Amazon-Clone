@@ -14,6 +14,9 @@ import OrderHistory from '../pages/OrderHistory';
 import UserProfile from '../pages/UserProfile';
 import PrivateRoute from './PrivateRoute';
 import SearchResults from '../pages/SearchResults';
+import AllProducts from '../pages/Admin/AllProducts';
+import AllOrders from '../pages/Admin/AllOrders';
+import AllUsers from '../pages/Admin/AllUsers';
 
 const App = () => {
 
@@ -37,6 +40,14 @@ const App = () => {
                 <PrivateRoute path="/profile" component={UserProfile}></PrivateRoute>
                 <Route path="/searchresults/:query" component={SearchResults} exact></Route>
                 <Route path="/" component={Home} exact></Route>
+
+
+                {/* Admin sectiojn routes */}
+
+                <Route path="/productlist" component={AllProducts}></Route>
+                <Route path="/orderlist" component={AllOrders}></Route>
+                <Route path="/userlist" component={AllUsers}></Route>
+
             </Switch>
             
             

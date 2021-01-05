@@ -11,7 +11,7 @@ import {prices} from "../data/priceRanges";
 
 const SearchResults = (props) => {
 
-    const [range, setRange] = useState([]);
+    const [range, setRange] = useState([0,50000]);
 
     const query = props.match.params.query;
     
@@ -27,7 +27,7 @@ const SearchResults = (props) => {
 
 
 
-    const handleFilters = (filters, category) => {
+    const handleFilters = (filters) => {
 
         const data = prices;
         let array = [];
@@ -47,12 +47,12 @@ const SearchResults = (props) => {
 
             <div className="filter-options-container">
                 <h3>
-                    Filter according to price range:
+                    Filter Price:
                 </h3>
 
                 <PriceCheckBox
                 list={prices}
-                handleFilters = {filters => handleFilters(filters, "pricerange")}
+                handleFilters = {filters => handleFilters(filters)}
                 />
                 
             </div>
