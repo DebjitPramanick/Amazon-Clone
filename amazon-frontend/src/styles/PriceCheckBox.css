@@ -1,0 +1,15 @@
+.price-range-checkbox{
+    border: 1px solid rgb(172, 172, 172);
+    border-radius: 14px;
+    padding: 4px;
+    font-size: 18px;
+    margin-right: 8px;
+    margin-top: 10px;
+    white-space: nowrap;
+    display: inline-block;
+    cursor: pointer !important;
+}
+
+.price-range-checkbox label{
+    margin-left: 6px;
+}

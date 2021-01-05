@@ -5,6 +5,7 @@ import Product from '../components/Product'
 import LoadingBox from "../components/LoadingBox"
 import MessageBox from "../components/MessageBox"
 import { listProducts } from '../actions/ProdcutActions'
+import PriceCheckBox from '../components/PriceCheckBox'
 
 
 const SearchResults = (props) => {
@@ -29,9 +30,7 @@ const SearchResults = (props) => {
             <div className="filter-options-container">
                 This is filter option container.
 
-                <h2>Filter option 1</h2>
-                <h2>Filter option 2</h2>
-                <h2>Filter option 3</h2>
+                <PriceCheckBox/>
                 
             </div>
 
