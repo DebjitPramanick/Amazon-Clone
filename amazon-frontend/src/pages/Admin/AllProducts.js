@@ -26,12 +26,12 @@ const AllProducts = () => {
                 <button className="add-product-btn">
                     Add new product
                 </button>
-                <p>
+                <h3>
                     <strong>Total Products</strong>
-                </p>
-                <p>
-                    
-                </p>
+                </h3>
+                <h1 style={{textAlign:"center"}}>
+                    19
+                </h1>
             </div>
             
             
