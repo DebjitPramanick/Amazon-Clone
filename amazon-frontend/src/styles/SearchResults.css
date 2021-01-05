@@ -1,20 +1,26 @@
 .search-page-container{
     margin: 20px;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-gap: 40px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .filter-options-container{
     background-color: rgb(235, 235, 235);
     border: 1px solid grey;
     padding: 20px;
+    flex-basis: 20%;
+    height: fit-content;
+}
+
+.filter-options-container h3{
+    margin-bottom: 20px;
 }
 
 .search-page-product-container{
     background-color: rgb(235, 235, 235);
     padding-top: 20px;
     padding-bottom: 20px;
+    flex-basis: 76%;
 }
 
 .search-product-container{
