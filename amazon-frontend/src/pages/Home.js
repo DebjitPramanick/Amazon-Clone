@@ -15,14 +15,10 @@ const Home = () => {
         dispatch(listProducts());
     }, [dispatch])
 
-    const productList2 = useSelector( state => state.productList);
-    const {loading,error,products} = productList2;
+    const productList = useSelector( state => state.productList);
+    const {loading,error,products} = productList;
 
     
-
-
-    
-
     const settings = {
         dots: true,
         infinite: true,
@@ -38,6 +34,8 @@ const Home = () => {
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 800
     }
 
     return (
@@ -67,7 +65,10 @@ const Home = () => {
             <ProductList/>
 
 
-            <div>
+            <div className="home-product-slider">
+
+                <h2 className="sec-title">More Products</h2>
+
                 <Slider {...settings2}>
 
                     {products && products.map((product)=>{

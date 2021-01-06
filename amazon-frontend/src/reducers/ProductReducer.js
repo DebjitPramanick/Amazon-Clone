@@ -39,7 +39,7 @@ export const prodcutDetailsReducer = (state = {loading: true, product: {}} ,acti
             console.log(action.payload.count)
             return {
                 loading: false,
-                product: action.payload.product
+                product: action.payload
             };
         case PRODUCT_DETAILS_FAIL:
             return {loading: false, error: action.payload};

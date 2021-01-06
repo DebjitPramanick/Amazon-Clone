@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 
 const Product = ({product}) => {
 
-
     return (
         <Link to={`/products/product/${product._id}`}>
         <div className="product-card" >
