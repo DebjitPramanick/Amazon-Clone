@@ -15,8 +15,8 @@ import UserProfile from '../pages/UserProfile';
 import PrivateRoute from './PrivateRoute';
 import SearchResults from '../pages/SearchResults';
 import AllProducts from '../pages/Admin/AllProducts';
-import AllOrders from '../pages/Admin/AllOrders';
-import AllUsers from '../pages/Admin/AllUsers';
+import CategoryBasedPage from '../pages/CategoryBasedPage';
+
 
 const App = () => {
 
@@ -28,6 +28,9 @@ const App = () => {
             <Header/>
 
             <Switch>
+                
+                <Route path="/" component={Home} exact></Route>
+
                 <Route exact path="/cart/:id?" component={Cart}></Route>
                 <Route exact path="/signin" component={SignIn}></Route>
                 <Route exact path="/register" component={Register}></Route>
@@ -39,14 +42,14 @@ const App = () => {
                 <Route path="/orderhistory" component={OrderHistory}></Route>
                 <PrivateRoute path="/profile" component={UserProfile}></PrivateRoute>
                 <Route path="/searchresults/:query" component={SearchResults} exact></Route>
-                <Route path="/" component={Home} exact></Route>
+                
+
+                <Route path="/category/:cat" component={CategoryBasedPage} exact></Route>
 
 
                 {/* Admin sectiojn routes */}
 
                 <Route path="/productlist" component={AllProducts}></Route>
-                <Route path="/orderlist" component={AllOrders}></Route>
-                <Route path="/userlist" component={AllUsers}></Route>
 
             </Switch>
             

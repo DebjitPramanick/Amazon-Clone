@@ -31,3 +31,17 @@
 }
 
 
+.clear-filter-btn{
+    background-color: #f0c040;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    outline: 0;
+    margin-bottom: 40px;
+}
+
+

@@ -1,6 +1,9 @@
-.banner-container{
+.home-page-container{
     max-width: 1600px;
     margin: auto;
+}
+
+.banner-container{
     margin-bottom: 40px;
 }
 .banners{

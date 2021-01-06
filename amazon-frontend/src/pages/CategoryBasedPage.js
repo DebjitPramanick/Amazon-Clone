@@ -9,11 +9,11 @@ import PriceCheckBox from '../components/PriceCheckBox'
 import {prices} from "../data/priceRanges";
 
 
-const SearchResults = (props) => {
+const CategoryBasedPage = (props) => {
 
     const [range, setRange] = useState([0,50000]);
 
-    const query = props.match.params.query;
+    const category = props.match.params.cat;
     
     const dispatch = useDispatch();
 
@@ -45,10 +45,7 @@ const SearchResults = (props) => {
     return (
         <div className="search-page-container">
 
-            
-
             <div className="filter-options-container">
-                
                 <button className="clear-filter-btn" onClick={() => setRange([0,50000])}>
                     Clear filters
                 </button>
@@ -70,11 +67,11 @@ const SearchResults = (props) => {
                 :
                 (
                     <>
-                    <h2 className="sec-title">Search results for "{query}"</h2>
+                    <h2 className="sec-title">Products under <span>{category}</span> category</h2>
                     <div className="search-product-container">
 
                         {products.filter(product=>
-                                product.name.toLowerCase().includes(query.toLowerCase())
+                                product.category.toLowerCase().includes(category.toLowerCase())
                                 && product.price <= range[1]
                                 && product.price >= range[0]
                             ).map(filteredProduct => (
@@ -91,4 +88,4 @@ const SearchResults = (props) => {
     )
 }
 
-export default SearchResults
+export default CategoryBasedPage

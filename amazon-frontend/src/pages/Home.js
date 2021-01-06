@@ -1,11 +1,27 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import { useSelector , useDispatch} from 'react-redux'
 import ProductList from '../components/ProductList';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "../styles/Home.css"
+import Product from '../components/Product'
+import { listProducts } from '../actions/ProdcutActions'
 
 const Home = () => {
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(listProducts());
+    }, [dispatch])
+
+    const productList2 = useSelector( state => state.productList);
+    const {loading,error,products} = productList2;
+
+    
+
+
+    
 
     const settings = {
         dots: true,
@@ -16,8 +32,16 @@ const Home = () => {
         autoplay: true,
     }
 
+    const settings2 = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+    }
+
     return (
-        <div>
+        <div className="home-page-container">
 
             <div className="banner-container">
 
@@ -41,6 +65,22 @@ const Home = () => {
             </div>
             
             <ProductList/>
+
+
+            <div>
+                <Slider {...settings2}>
+
+                    {products && products.map((product)=>{
+                            return(
+                                <Product key={product._id} product={product} /> 
+                            )
+                        })
+                    }
+
+                </Slider>
+            </div>
+
+
         </div>
     )
 }

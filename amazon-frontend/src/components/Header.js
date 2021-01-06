@@ -112,18 +112,11 @@ const Header = (props) => {
                                     </p>
 
                                     <ul className={ secondDropdown? 'dropdown-content show' : 'dropdown-content'}>
-                                        <li>
-                                           <Link to="/dashboard">Dashboard</Link> 
-                                        </li>
+                                        
                                         <li>
                                            <Link to="/productlist">Products</Link> 
                                         </li>
-                                        <li>
-                                           <Link to="/orderlist">Orders</Link> 
-                                        </li>
-                                        <li>
-                                           <Link to="/userlist">Users</Link> 
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             )}
@@ -134,10 +127,10 @@ const Header = (props) => {
 
                 <div className="category-container">
                     <ul>
-                        <li><Link to="/">Mobile</Link></li>
-                        <li><Link to="/">Laptop</Link></li>
-                        <li><Link to="/">Monitor</Link></li>
-                        <li><Link to="/">Computer Accessories</Link></li>
+                        <li><Link to="/category/mobile">Mobile</Link></li>
+                        <li><Link to="/category/laptop">Laptop</Link></li>
+                        <li><Link to="/category/monitor">Monitor</Link></li>
+                        <li><Link to="/category/accessories">Computer Accessories</Link></li>
                     </ul>
                 </div>
             </div>

@@ -18,6 +18,10 @@
     color: rgb(88, 88, 88);
 }
 
+.sec-title span{
+    text-transform: capitalize;
+}
+
 
 @media(max-width: 900px){
     .product-container{
