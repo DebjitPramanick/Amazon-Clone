@@ -29,8 +29,6 @@ export const prodcutListReducer = (state = {loading: true, products: []} ,action
 
 
 
-
-
 export const prodcutDetailsReducer = (state = {loading: true, product: {}} ,action) => {
     switch(action.type){
 
@@ -38,8 +36,11 @@ export const prodcutDetailsReducer = (state = {loading: true, product: {}} ,acti
             return {loading: true};
 
         case PRODUCT_DETAILS_SUCCESS:
-            return {loading: false, product: action.payload};
-
+            console.log(action.payload.count)
+            return {
+                loading: false,
+                product: action.payload.product
+            };
         case PRODUCT_DETAILS_FAIL:
             return {loading: false, error: action.payload};
         

@@ -19,6 +19,11 @@ const AllProducts = () => {
         dispatch(listProducts());
     }, [dispatch])
 
+
+    useEffect(() => {
+        dispatch(listProducts());
+    }, [dispatch])
+
     return (
         <div className="admin-orders-page-container">
             <div className="header-sec">
@@ -26,12 +31,6 @@ const AllProducts = () => {
                 <button className="add-product-btn">
                     Add new product
                 </button>
-                <h3>
-                    <strong>Total Products</strong>
-                </h3>
-                <h1 style={{textAlign:"center"}}>
-                    19
-                </h1>
             </div>
             
             
