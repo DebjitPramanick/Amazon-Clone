@@ -19,3 +19,9 @@
 .select-method-ip label{
     margin-left: 14px;
 }
+
+@media(max-width: 900px){
+    .pay-method-container{
+        transform: translateY(30%);
+    }
+}

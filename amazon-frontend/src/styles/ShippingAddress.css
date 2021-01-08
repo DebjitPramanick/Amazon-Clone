@@ -16,3 +16,9 @@
     font-size: 18px;
     outline: 0;
 }
+
+@media(max-width: 900px){
+    .shipping-form-container{
+        transform: translateY(2%);
+    }
+}

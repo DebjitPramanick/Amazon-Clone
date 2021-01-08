@@ -167,3 +167,28 @@ header .nav-links li {
   border-radius: 50%;
   margin-left: 6px;
 }
+
+@media(max-width: 900px){
+    .search-bar{
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .nav-links{
+      flex-direction: row-reverse;
+      width: 100%;
+      justify-content: center;
+    }
+
+    header .brand a{
+      font-size: 1.2rem;
+    }
+    header .brand{
+      margin-bottom: 10px;
+    }
+
+    .category-container{
+      margin-top: 16px;
+    }
+
+}

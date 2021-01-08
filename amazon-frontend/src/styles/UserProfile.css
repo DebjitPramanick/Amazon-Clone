@@ -17,3 +17,9 @@
     outline: 0;
 }
 
+@media(max-width: 900px){
+    .user-dets-container{
+        transform: translateY(16%);
+    }
+}
+

@@ -2,8 +2,7 @@
     max-width: 1600px;
     margin: 80px auto;
     background-color: rgb(235, 235, 235);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 .product-container{
@@ -26,6 +25,15 @@
 @media(max-width: 900px){
     .product-container{
         grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+    }
+
+    .home-product-container{
+        margin-top: 30px;
+    }
+
+    .sec-title{
+        margin-bottom: 16px;
     }
 }
 
