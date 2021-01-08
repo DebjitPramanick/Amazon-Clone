@@ -6,7 +6,7 @@ import LoadingBox from "../components/LoadingBox"
 import MessageBox from "../components/MessageBox"
 import { detailsOrder, payOrder } from '../actions/OrderAction'
 import "../styles/OrderDetails.css"
-import axios from 'axios'
+import axios from "../Axios"
 import {PayPalButton} from 'react-paypal-button-v2'
 import { ORDER_PAY_RESET } from '../constants/OrderConstant'
 
@@ -28,6 +28,7 @@ const OrderDetails = (props) => {
             const { data } = await axios.get('/api/config/paypal');
             const script = document.createElement('script');
 
+            console.log(data);
             script.type = "text/javascript";
             script.src = `https://www.paypal.com/sdk/js?client-id=${data}`;
             script.async = true;

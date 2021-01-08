@@ -49,3 +49,12 @@
     color: rgb(36, 36, 36) ;
     font-size: 18px;
 }
+
+@media(max-width: 900px){
+    .orderhistory-container{
+        overflow-x: scroll;
+    }
+    .table{
+        width: 1900px;
+    }
+}
