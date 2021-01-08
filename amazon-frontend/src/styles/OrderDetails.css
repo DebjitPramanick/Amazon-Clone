@@ -9,5 +9,10 @@
 }
 
 @media(max-width: 900px){
-    
+    .order-row1{
+        grid-template-columns: 2fr 1fr;
+    }
+    .order-row1 p{
+        grid-column: 1/3;
+    }
 }

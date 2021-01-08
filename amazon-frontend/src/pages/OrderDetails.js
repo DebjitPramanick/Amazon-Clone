@@ -157,10 +157,10 @@ const OrderDetails = (props) => {
 
                             <div className="order-page-pay-btn">
                                 {
-                                    !order.isPaid && 
+                                    order.isPaid && 
 
                                             !sdkReady?
-                                            (<LoadingBox></LoadingBox>)
+                                            (<MessageBox variant="success">Payment done!</MessageBox>)
                                             : (
                                             <>
                                             {errorPay && <MessageBox variant="danger"></MessageBox>}
