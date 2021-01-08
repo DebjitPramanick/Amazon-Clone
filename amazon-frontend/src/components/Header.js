@@ -42,6 +42,8 @@ const Header = (props) => {
 
     const [query, setQuery] = useState('');
 
+    console.log(userInfo)
+
     return (
         <header>
             <div className="container">
