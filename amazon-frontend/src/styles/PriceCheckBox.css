@@ -12,3 +12,17 @@
 .price-range-checkbox label{
     margin-left: 6px;
 }
+
+
+@media(max-width: 900px){
+    .price-range-container{
+        display: flex;
+        align-items: center;
+        overflow-x: scroll;
+    }
+
+    .price-range-checkbox{
+        margin-bottom: 16px;
+        margin-right: 4px;
+    }
+}
