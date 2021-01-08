@@ -105,14 +105,14 @@ const Header = (props) => {
                             
                         </li>
 
-                        <li>
-                            {userInfo && userInfo.isAdmin && (
+                        {userInfo && userInfo.isAdmin && (
+                            <li>
                                 <div className="header-dropdown">
                                     <p onClick={showSecondDropDown}>
                                         Admin 
                                         <ArrowDropDownIcon/>
                                     </p>
-
+                            
                                     <ul className={ secondDropdown? 'dropdown-content show' : 'dropdown-content'}>
                                         
                                         <li>
@@ -121,8 +121,9 @@ const Header = (props) => {
                                         
                                     </ul>
                                 </div>
-                            )}
-                        </li>
+                            </li>
+                        )}
+                        
                             
                     </ul>
                 </div>
