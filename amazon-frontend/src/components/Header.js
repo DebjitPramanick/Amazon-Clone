@@ -59,10 +59,12 @@ const Header = (props) => {
                         value={query}>
                         </input>
 
-                        <Link to={`/searchresults/${query}`}>
-                            <button className="search-btn"
-                            ><SearchIcon/></button>
-                        </Link>
+                        <div className="search-btn">
+                            <Link to={`/searchresults/${query}`}>
+                                <SearchIcon/>
+                            </Link>
+                        </div>
+                        
                     </div>
 
                     <ul className="nav-links">
@@ -134,6 +136,7 @@ const Header = (props) => {
                         <li><Link to="/category/laptop">Laptop</Link></li>
                         <li><Link to="/category/monitor">Monitor</Link></li>
                         <li><Link to="/category/accessories">Computer Accessories</Link></li>
+                        <li><Link to="/category/earphones">Earphones</Link></li>
                     </ul>
                 </div>
             </div>

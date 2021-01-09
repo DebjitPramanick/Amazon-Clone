@@ -37,6 +37,7 @@ header .inner-content {
 }
 
 .category-container ul li a{
+  white-space: nowrap;
   font-size: 18px;
 }
 
@@ -68,6 +69,7 @@ header .brand a {
   border-radius: 6px;
   overflow: hidden;
   width: 60%;
+  background-color: #f0c040;
 }
 
 .search-input{
@@ -79,12 +81,16 @@ header .brand a {
 }
 
 .search-btn{
-  background-color:  #f0c040;
   cursor: pointer;
-  padding: 6px;
   text-align: center;
   outline: 0;
   border: 0;
+  display: block;
+}
+.search-btn a{
+  display: block;
+  color: #000000;
+  padding: 6px;
 }
 
 
@@ -177,7 +183,6 @@ header .nav-links li {
 
     .nav-links{
       flex-direction: row-reverse;
-      width: 100%;
       justify-content: center;
     }
 
@@ -190,6 +195,11 @@ header .nav-links li {
 
     .category-container{
       margin-top: 16px;
+    }
+
+    .category-container ul{
+      display: flex;
+      overflow-x: scroll;
     }
 
 }
