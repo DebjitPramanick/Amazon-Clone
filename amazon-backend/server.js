@@ -11,7 +11,7 @@ dotenv.config();
 
 const app = express()
 const port = process.env.PORT || 5000;
-const connection_url = "mongodb+srv://admin-debjit:hKOIXl3bHrISym7C@cluster0.e6nrm.mongodb.net/amazonDB?retryWrites=true&w=majority";
+const connection_url = "<Connection Link>";
 
 mongoose.connect(connection_url,{
     useCreateIndex: true,
