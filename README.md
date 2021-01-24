@@ -38,3 +38,7 @@ I have created it with **React** in frontend,  **Node and Express** for backend 
 <img src="./screenshots/ss3.png" alt=""/>
 <br>
 <img src="./screenshots/ss4.png" alt=""/>
+<br>
+<img src="./screenshots/ss5.png" alt=""/>
+<br>
+<img src="./screenshots/ss6.png" alt=""/>
