@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-    baseURL: "https://amazon-clone-backend-2021.herokuapp.com/"
+    baseURL: "https://amazon-be-7evd.onrender.com"
 })
 
 export default instance
