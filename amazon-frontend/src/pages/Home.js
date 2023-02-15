@@ -76,9 +76,6 @@ const Home = () => {
                 <Slider {...settings}>
 
                     <div className="banners">
-                      <img src="https://refixya.com/assets/media/uploadmajor-brand/hp/hp-laptop-service-centre-kalyan/hp.png" alt=""/>
-                    </div>
-                    <div className="banners">
                       <img src="https://m.media-amazon.com/images/S/aplus-media/vc/342b936a-69f1-4e59-89ba-7ddb98c1acda.jpg" alt=""/>
                     </div>
                     <div className="banners">
