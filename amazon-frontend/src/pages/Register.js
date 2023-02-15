@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import {Link} from 'react-router-dom'
-import { register} from '../actions/USerAction';
+import { register} from '../actions/UserAction';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import "../styles/Register.css"

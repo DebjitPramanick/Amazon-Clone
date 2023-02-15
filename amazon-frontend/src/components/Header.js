@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {Link} from 'react-router-dom';
 import '../styles/Header.css'
 import { useSelector, useDispatch } from 'react-redux';
-import { signout } from '../actions/USerAction';
+import { signout } from '../actions/UserAction';
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
