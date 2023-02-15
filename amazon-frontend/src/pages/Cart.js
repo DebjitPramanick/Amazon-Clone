@@ -6,7 +6,6 @@ import MessageBox from "../components/MessageBox";
 import "../styles/Cart.css"
 import CancelIcon from '@material-ui/icons/Cancel';
 
-
 const Cart = (props) => {
 
     const productID = props.match.params.id;
